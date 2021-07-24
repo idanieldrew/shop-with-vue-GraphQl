@@ -1,0 +1,10 @@
+mutation(
+      $id:ID!
+){
+ deleteProduct(
+  id: $id
+ )
+  {
+    id
+  }
+}

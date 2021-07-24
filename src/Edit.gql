@@ -1,0 +1,24 @@
+mutation(
+  $id: ID
+  $name: String!
+  $color: String!
+  $size: String!
+  $image: String!
+  $details: String!
+  $description: String
+  $category_id: Int!
+) {
+  editProduct(
+    id: $id
+    name: $name
+    color: $color
+    size: $size
+    image: $image
+    details: $details
+    description: $description
+    category_id: $category_id
+  ) {
+    name
+    color
+  }
+}
