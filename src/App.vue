@@ -1,13 +1,62 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="h-full">
+    <Navbar />
+    <Hero />
+    <div class="continer">
+      <div class="flex justify-center py-10 bg-gray-300 lg:flex-row flex-col">
+        <div class="lg:py-0 py-2">
+          <button
+            class="
+              bg-purple-600
+              px-16
+              py-3
+              border-2 border-purple-800
+              rounded
+              text-white
+              hover:text-purple-600
+              hover:bg-white mx-2
+            "
+          >
+            دیدن کتاب ها
+          </button>
+        </div>
+        <div>
+          <button
+            class="
+              bg-white
+              px-16
+              py-3
+              border-2 border-purple-800
+              rounded
+              text-purple-600
+              hover:text-white
+              hover:bg-purple-600
+              font-bold
+              transform
+              lg:hover:-translate-y-5
+              duration-1000
+            "
+          >
+            کتاب جدید
+          </button>
+        </div>
+      </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
+<script>
+import Navbar from "./views/layout/Navbar.vue";
+import Hero from "./views/Hero.vue";
+
+export default {
+  components: {
+    Navbar,
+    Hero,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -27,6 +76,6 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #2c3e50;
 }
 </style>

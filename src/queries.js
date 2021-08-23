@@ -22,9 +22,10 @@ query($id:ID!) {
   category(id: $id) {
         id
         name
-      products {
+        products {
         id
-            name
+        name
+        image
         }
   }
 }

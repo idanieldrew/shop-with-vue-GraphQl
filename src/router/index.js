@@ -27,7 +27,7 @@ const routes = [{
     },
 
     {
-        path: 'addProduct',
+        path: '/addProduct',
         name: 'addProduct',
         component: () =>
             import ('../views/Crud/Add.vue')
@@ -42,7 +42,8 @@ const routes = [{
 ]
 
 const router = new VueRouter({
-    routes
+    routes,
+    history
 })
 
 export default router
